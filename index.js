@@ -6,6 +6,7 @@ const app = express();
 
 // Enable JSON parsing and CORS
 app.use(express.json());
+app.use(express.static("dist"));
 app.use(cors());
 
 // Define morgan custom token
