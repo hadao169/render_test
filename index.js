@@ -1,6 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import cors from "cors";
+import x from "../"
 console.log(cors);
 const app = express();
 
@@ -77,7 +78,7 @@ app.post("/api/persons", (req, res) => {
   }
 
   const newEntry = { id: newID.toString(), ...body };
-  phonebookList = [...phonebookList, newEntry];
+  phonebookList = phonebookList.concat(newEntry);
   res.json(phonebookList);
 });
 
