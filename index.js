@@ -78,7 +78,7 @@ app.post("/api/persons", (req, res) => {
 
   const newEntry = { id: newID.toString(), ...body };
   phonebookList = phonebookList.concat(newEntry);
-  res.json(phonebookList);
+  res.json(newEntry);
 });
 
 app.get("/api/persons/:id", (req, res) => {
